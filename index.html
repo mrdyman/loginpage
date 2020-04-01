@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <title>Login Page</title>
+</head>
+
+<body>
+
+    <img class="wave" src="img/wave.png">
+    <div class="container">
+        <div class="img">
+            <img src="img/phone.svg">
+        </div>
+        <div class="login-container">
+            <form action="index.html">
+                <img class="avatar" src="img/avatar.svg">
+                <h2>Hello, WELCOME</h2>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <h5>Email</h5>
+                        <input class="input" type="text" name="username" id="username">
+                    </div>
+                </div>
+
+                <div class="input-div two">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h5>Password</h5>
+                        <input class="input" type="password" name="username" id="username">
+                    </div>
+                </div>
+                <a href="forgot-password.html" class="label">Forgot Password?</a>
+                <input type="submit" class="btn button" value="login">
+                <div class="label">
+                    <label for="">Dont have account ?</label>
+                    <a href="registration.html" class="label-daftar">Signup</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+    loading();
+    // CekLoading();
+    function CekLoading() {
+        let stateCheck = setInterval(() => {
+            if (document.readyState === 'complete') {
+                clearInterval(stateCheck);
+                // document ready
+                console.log('loading selesai')
+            } else {
+                $(this).addClass('button-active');
+                console.log('loading')
+            }
+        }, 50);
+    }
+
+    function loading() {
+        $(document).ready(function () {
+            $('.button').on('click', function () {
+                // CekLoading();
+                // $(this).addClass('button-active');
+                // $(this).addClass('buttonload');
+            });
+        });
+    }
+</script>
